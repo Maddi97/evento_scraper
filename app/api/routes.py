@@ -1,8 +1,9 @@
 from fastapi import APIRouter, HTTPException
 from app.models.request_models import UrlsRequest
-from app.services.scraper import scrape_multiple_urls
+from app.services.scraper_service import scrape_multiple_urls
 
 router = APIRouter()
+
 
 @router.post("/scrapeEventsFromUrls")
 async def scrape(request: UrlsRequest):
